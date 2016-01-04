@@ -9,7 +9,7 @@ subtitle: Reference
 *   Use the `numpy` library to work with arrays in Python.
 *   Use `variable = value` to assign a value to a variable in order to record it in memory.
 *   Variables are created on demand whenever a value is assigned to them.
-*   Use `print something` to display the value of `something`.
+*   Use `print(something)` to display the value of `something`.
 *   The expression `array.shape` gives the shape of an array.
 *   Use `array[x, y]` to select a single element from an array.
 *   Array indices start at 0, not 1.
@@ -20,7 +20,38 @@ subtitle: Reference
 *   Use `array.mean(axis=0)` or `array.mean(axis=1)` to calculate statistics across the specified axis.
 *   Use the `pyplot` library from `matplotlib` for creating simple visualizations.
 
-## [Creating Functions](02-func.html)
+## [Repeating Actions with Loops](02-loop.html)
+
+*   Use `for variable in collection` to process the elements of a collection one at a time.
+*   The body of a for loop must be indented.
+*   Use `len(thing)` to determine the length of something that contains other values.
+
+## [Storing Multiple Values in Lists](03-lists.html)
+
+*   `[value1, value2, value3, ...]` creates a list.
+*   Lists are indexed and sliced in the same way as strings and arrays.
+*   Lists are mutable (i.e., their values can be changed in place).
+*   Strings are immutable (i.e., the characters in them cannot be changed).
+
+## [Analyzing Data from Multiple Files](04-files.html)
+
+*   Use `glob.glob(pattern)` to create a list of files whose names match a pattern.
+*   Use `*` in a pattern to match zero or more characters, and `?` to match any single character.
+
+## [Making Choices](05-cond.html)
+
+*   Use the `ImageGrid` class from the `ipythonblocks` library to create simple "images" made of colored blocks.
+*   Specify colors use (red, green, blue) triples, each component of which is an integer in the range 0..255.
+*   Use `if condition` to start a conditional statement, `elif condition` to provide additional tests, and `else` to provide a default.
+*   The bodies of the branches of conditional statements must be indented.
+*   Use `==` to test for equality.
+*   `X and Y` is only true if both X and Y are true.
+*   `X or Y` is true if either X or Y, or both, are true.
+*   Zero, the empty string, and the empty list are considered false; all other numbers, strings, and lists are considered true.
+*   Nest loops to operate on multi-dimensional data.
+*   Put code whose parameters change frequently in a function, then call it with different parameter values to customize its behavior.
+
+## [Creating Functions](06-func.html)
 
 *   Define a function using `def name(...params...)`.
 *   The body of a function must be indented.
@@ -34,53 +65,6 @@ subtitle: Reference
 *   Specify default values for parameters when defining a function using `name=value` in the parameter list.
 *   Parameters can be passed by matching based on name, by position, or by omitting them (in which case the default value is used).
 
-## [Analyzing Multiple Data Sets](03-loop.html)
-
-*   Use `for variable in collection` to process the elements of a collection one at a time.
-*   The body of a for loop must be indented.
-*   Use `len(thing)` to determine the length of something that contains other values.
-*   `[value1, value2, value3, ...]` creates a list.
-*   Lists are indexed and sliced in the same way as strings and arrays.
-*   Lists are mutable (i.e., their values can be changed in place).
-*   Strings are immutable (i.e., the characters in them cannot be changed).
-*   Use `glob.glob(pattern)` to create a list of files whose names match a pattern.
-*   Use `*` in a pattern to match zero or more characters, and `?` to match any single character.
-
-## [Making Choices](04-cond.html)
-
-*   Use the `ImageGrid` class from the `ipythonblocks` library to create simple "images" made of colored blocks.
-*   Specify colors use (red, green, blue) triples, each component of which is an integer in the range 0..255.
-*   Use `if condition` to start a conditional statement, `elif condition` to provide additional tests, and `else` to provide a default.
-*   The bodies of the branches of conditional statements must be indented.
-*   Use `==` to test for equality.
-*   `X and Y` is only true if both X and Y are true.
-*   `X or Y` is true if either X or Y, or both, are true.
-*   Zero, the empty string, and the empty list are considered false; all other numbers, strings, and lists are considered true.
-*   Nest loops to operate on multi-dimensional data.
-*   Put code whose parameters change frequently in a function, then call it with different parameter values to customize its behavior.
-
-## [Defensive Programming](05-defensive.html)
-
-*   Program defensively, i.e., assume that errors are going to arise, and write code to detect them when they do.
-*   Put assertions in programs to check their state as they run, and to help readers understand how those programs are supposed to work.
-*   Use preconditions to check that the inputs to a function are safe to use.
-*   Use postconditions to check that the output from a function is safe to use.
-*   Write tests before writing code in order to help determine exactly what that code is supposed to do.
-*   Know what code is supposed to do *before* trying to debug it.
-*   Make it fail every time.
-*   Make it fail fast.
-*   Change one thing at a time, and for a reason.
-*   Keep track of what you've done.
-*   Be humble.
-
-## [Command-Line Programs](06-cmdline.html)
-
-*   The `sys` library connects a Python program to the system it is running on.
-*   The list `sys.argv` contains the command-line arguments that a program was run with.
-*   Avoid silent failures.
-*   The "file" `sys.stdin` connects to a program's standard input.
-*   The "file" `sys.stdout` connects to a program's standard output.
-
 ## [Errors and Exceptions](07-errors.html)
 
 *   Tracebacks can look intimidating, but they give us a lot of useful information about what went wrong in our program, including where the error occurred and what type of error it was.
@@ -89,157 +73,275 @@ subtitle: Reference
 *   Containers like lists and dictionaries will generate errors if you try to access items in them that do not exist. For lists, this type of error is called an `IndexError`; for dictionaries, it is called a `KeyError`.
 *   Trying to read a file that does not exist will give you an `IOError`. Trying to read a file that is open for writing, or writing to a file that is open for reading, will also give you an `IOError`.
 
+## [Defensive Programming](08-defensive.html)
+
+*   Program defensively, i.e., assume that errors are going to arise, and write code to detect them when they do.
+*   Put assertions in programs to check their state as they run, and to help readers understand how those programs are supposed to work.
+*   Use preconditions to check that the inputs to a function are safe to use.
+*   Use postconditions to check that the output from a function is safe to use.
+*   Write tests before writing code in order to help determine exactly what that code is supposed to do.
+
+
+## [Debugging](09-debugging.html)
+
+*   Know what code is supposed to do *before* trying to debug it.
+*   Make it fail every time.
+*   Make it fail fast.
+*   Change one thing at a time, and for a reason.
+*   Keep track of what you've done.
+*   Be humble.
+
+## [Command-Line Programs](10-cmdline.html)
+
+*   The `sys` library connects a Python program to the system it is running on.
+*   The list `sys.argv` contains the command-line arguments that a program was run with.
+*   Avoid silent failures.
+*   The "file" `sys.stdin` connects to a program's standard input.
+*   The "file" `sys.stdout` connects to a program's standard output.
+
+
 ## Glossary
 
-silent failure
-:   FIXME
-
 additive color model
-:   FIXME
+:   A way to represent colors as the sum of contributions from primary colors
+    such as [red, green, and blue](#rgb).
 
-alias
-:   FIXME
+argument
+:   A value given to a function or program when it runs.
+    The term is often used interchangeably (and inconsistently) with [parameter](#parameter).
 
 assertion
-:   FIXME
+:   An expression which is supposed to be true at a particular point in a program.
+    Programmers typically put assertions in their code to check for errors;
+    if the assertion fails (i.e., if the expression evaluates as false),
+    the program halts and produces an error message.
+    See also: [invariant](#invariant), [precondition](#precondition), [postcondition](#postcondition).
 
 assign
-:   FIXME
+:   To give a value a name by associating a variable with it.
 
 body
-:   FIXME
+:   (of a function): the statements that are executed when a function runs.
+
+call stack
+:   A data structure inside a running program that keeps track of active function calls.
+
+case-insensitive
+:   Treating text as if upper and lower case characters of the same letter were the same.
+    See also: [case-sensitive](#case-sensitive).
 
 case-sensitive
-:   FIXME
+:   Treating text as if upper and lower case characters of the same letter are different.
+    See also: [case-insensitive](#case-insensitive).
 
 comment
-:   FIXME
+:   A remark in a program that is intended to help human readers understand what is going on,
+    but is ignored by the computer.
+    Comments in Python, R, and the Unix shell start with a `#` character and run to the end of the line;
+    comments in SQL start with `--`,
+    and other languages have other conventions.
 
 compose
-:   FIXME
+:   To apply one function to the result of another, such as `f(g(x))`.
 
 conditional statement
-:   FIXME
+:   A statement in a program that might or might not be executed
+    depending on whether a test is true or false.
+
+comma-separated values
+:   (CSV) A common textual representation for tables
+    in which the values in each row are separated by commas.
 
 default value
-:   FIXME
+:   A value to use for a [parameter](#parameter) if nothing is specified explicitly.
 
 defensive programming
-:   FIXME
+:   The practice of writing programs that check their own operation to catch errors as early as possible.
 
 delimiter
-:   FIXME
+:   A character or characters used to separate individual values,
+    such as the commas between columns in a [CSV](#comma-separated-values) file.
 
 docstring
-:   FIXME
+:   Short for "documentation string",
+    this refers to textual documentation embedded in Python programs.
+    Unlike comments, docstrings are preserved in the running program
+    and can be examined in interactive sessions.
 
 documentation
-:   FIXME
+:   Human-language text written to explain what software does,
+    how it works, or how to use it.
 
 dotted notation
-:   FIXME
+:   A two-part notation used in many programming languages
+    in which `thing.component` refers to the `component` belonging to `thing`.
 
 empty string
-:   FIXME
+:   A character string containing no characters,
+    often thought of as the "zero" of text.
 
 encapsulation
-:   FIXME
+:   The practice of hiding something's implementation details
+    so that the rest of a program can worry about *what* it does
+    rather than *how* it does it.
 
-floating-point numbers
-:   FIXME
+floating-point number
+:   A number containing a fractional part and an exponent.
+    See also: [integer](#integer).
 
 for loop
-:   FIXME
+:   A loop that is executed once for each value in some kind of set, list, or range.
+    See also: [while loop](#while-loop).
 
 function call
-:   FIXME
+:   A use of a function in another piece of software.
 
 immutable
-:   FIXME
+:   Unchangeable.
+    The value of immutable data cannot be altered after it has been created.
+    See also: [mutable](#mutable).
 
 import
-:   FIXME
+:   To load a [library](#library) into a program.
 
 in-place operators
-:   FIXME
+:   An operator such as `+=` that provides a shorthand notation for
+    the common case in which the variable being assigned to
+    is also an operand on the right hand side of the assignment.
+    For example, the statement `x += 3` means the same thing as `x = x + 3`.
 
 index
-:   FIXME
+:   A subscript that specifies the location of a single value in a collection,
+    such as a single pixel in an image.
 
 inner loop
-:   FIXME
+:   A loop that is inside another loop. See also: [outer loop](#outer-loop).
 
 integer
-:   FIXME
+:   A whole number, such as -12343. See also: [floating-point number](#floating-point-number).
 
 invariant
-:   FIXME
+:   An expression whose value doesn't change during the execution of a program,
+    typically used in an [assertion](#assertion).
+    See also: [precondition](#precondition), [postcondition](#postcondition).
 
 library
-:   FIXME
+:   A family of code units (functions, classes, variables) that implement a set of
+    related tasks.
 
 loop variable
-:   FIXME
+:   The variable that keeps track of the progress of the loop.
 
 member
-:   FIXME
+:   A variable contained within an [object](#object).
 
 method
-:   FIXME
+:   A function which is tied to a particular [object](#object).
+    Each of an object's methods typically implements one of the things it can do,
+    or one of the questions it can answer.
+
+object
+:   A collection of conceptually related variables ([members](#member)) and
+    functions using those variables ([methods](#method)).
 
 outer loop
-:   FIXME
+:   A loop that contains another loop.
+    See also: [inner loop](#inner-loop).
 
 parameter
-:   FIXME
+:   A variable named in the function's declaration that is used to hold a value passed into the call.
+    The term is often used interchangeably (and inconsistently) with [argument](#argument).
+
+pipe
+:   A connection from the output of one program to the input of another.
+    When two or more programs are connected in this way, they are called a "pipeline".
 
 postcondition
-:   FIXME
+:   A condition that a function (or other block of code) guarantees is true
+    once it has finished running.
+    Postconditions are often represented using [assertions](#assertion).
 
 precondition
-:   FIXME
+:   A condition that must be true in order for a function (or other block of code) to run correctly.
 
 regression
-:   FIXME
+:   To re-introduce a bug that was once fixed.
 
 return statement
-:   FIXME
+:   A statement that causes a function to stop executing and return a value to its caller immediately.
 
 RGB
-:   FIXME
+:   An [additive model](#additive-color-model)
+    that represents colors as combinations of red, green, and blue.
+    Each color's value is typically in the range 0..255
+    (i.e., a one-byte integer).
+
+sequence
+:   A collection of information that is presented in a specific order.
+    For example, in Python, a [string](#string) is a sequence of characters,
+    while a list is a sequence of any variable.
 
 shape
-:   FIXME
+:   An array's dimensions, represented as a vector.
+    For example, a 5&times;3 array's shape is `(5,3)`.
+
+silent failure
+:   Failing without producing any warning messages.
+    Silent failures are hard to detect and debug.
 
 slice
-:   FIXME
+:   A regular subsequence of a larger sequence,
+    such as the first five elements or every second element.
 
 stack frame
-:   FIXME
+:   A data structure that provides storage for a function's local variables.
+    Each time a function is called, a new stack frame is created
+    and put on the top of the [call stack](#call-stack). When the function returns,
+    the stack frame is discarded.
 
 standard input
-:   FIXME
+:   A process's default input stream.
+    In interactive command-line applications,
+    it is typically connected to the keyboard; in a [pipe](#pipe),
+    it receives data from the [standard output](#standard-output) of the preceding process.
+
+standard output
+:   A process's default output stream.
+    In interactive command-line applications,
+    data sent to standard output is displayed on the screen;
+    in a [pipe](#pipe),
+    it is passed to the [standard input](#standard-input) of the next process.
 
 string
-:   FIXME
+:   Short for "character string",
+    a [sequence](#sequence) of zero or more characters.
 
 syntax error
-:   FIXME
+:   A programming error that occurs when statements are in an order or contain characters
+    not expected by the programming language.
 
 test oracle
-:   FIXME
+:   A program, device, data set, or human being
+    against which the results of a test can be compared.
 
 test-driven development
-:   FIXME
+:   The practice of writing unit tests *before* writing the code they test.
 
 traceback
-:   FIXME
+:   The sequence of function calls that led to an error.
 
 tuple
-:   FIXME
+:   An [immutable](#immutable) [sequence](#sequence) of values.
 
 type
-:   FIXME
+:   The classification of something in a program (for example, the contents of a variable)
+    as a kind of number (e.g. [floating-point](#float), [integer](#integer)), [string](#string), or something else.
 
 type of error
-:   FIXME
+:   Indicates the nature of an error in a program. For example, in Python,
+    an `IOError` to problems with file input/output.
+    See also: [syntax error](#syntax-error).
+
+while loop
+:   A loop that keeps executing as long as some condition is true.
+    See also: [for loop](#for-loop).

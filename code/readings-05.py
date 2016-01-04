@@ -1,5 +1,5 @@
 import sys
-import numpy as np
+import numpy
 
 def main():
     script = sys.argv[0]
@@ -11,7 +11,7 @@ def main():
         process(f, action)
 
 def process(filename, action):
-    data = np.loadtxt(filename, delimiter=',')
+    data = numpy.loadtxt(filename, delimiter=',')
 
     if action == '--min':
         values = data.min(axis=1)
@@ -21,6 +21,6 @@ def process(filename, action):
         values = data.max(axis=1)
 
     for m in values:
-        print m
+        print(m)
 
 main()
