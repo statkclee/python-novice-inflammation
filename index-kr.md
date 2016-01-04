@@ -1,6 +1,6 @@
 ---
-layout: lesson
-title: Programming with Python
+layout: page
+title: 파이썬 프로그래밍
 ---
 The best way to learn how to program is to do something useful,
 so this introduction to Python is built around a common scientific task:
@@ -17,12 +17,12 @@ We use Python in our lessons because:
 
 But the two most important things are
 to use whatever language your colleagues are using,
-so that you can share you work with them easily,
+so that you can share your work with them easily,
 and to use that language *well*.
 
 We are studying inflammation in patients who have been given a new treatment for arthritis,
-and need to analyze the first dozen data sets.
-The data sets are stored in **comma-separated values** (CSV) format:
+and need to analyze the first dozen data sets of their daily inflammation.
+The data sets are stored in [comma-separated values](reference.html#comma-separated-values) (CSV) format:
 each row holds information for a single patient,
 and the columns represent successive days.
 The first few rows of our first file look like this:
@@ -43,25 +43,44 @@ We want to:
 
 To do all that, we'll have to learn a little bit about programming.
 
-> ## Prerequisites
+> ## Prerequisites {.prereq}
 >
-> FIXME
-> A short paragraph describing what learners need to know
-> before tackling this lesson.
+> Learners need to understand the concepts of files and directories
+> (including the working directory) and how to start a Python
+> interpreter before tackling this lesson. This lesson references the Jupyter (IPython)
+> Notebook although it can be taught through any Python interpreter.
+> The commands in this lesson pertain to **Python 3**.
 
-## Topics
+> ## Getting ready {.getready}
+>
+> You need to download some files to follow this lesson:
+>
+> 1. Make a new folder in your Desktop called `python-novice-inflammation`.
+> 2. Download [python-novice-inflammation-data.zip](./python-novice-inflammation-data.zip) and move the file to this folder.
+> 3. If it's not unzipped yet, double-click on it to unzip it. You should end up with a new folder called `data`.
+> 4. You can access this folder from the Unix shell with:
+>
+> ~~~ {.input}
+> $ cd && cd Desktop/python-novice-inflammation/data
+> ~~~
 
-1.  [Analyzing Patient Data](01-numpy.html)
-2.  [Creating Functions](02-func.html)
-3.  [Analyzing Multiple Data Sets](03-loop.html)
-4.  [Making Choices](04-cond.html)
-5.  [Defensive Programming](05-defensive.html)
-6.  [Command-Line Programs](06-cmdline.html)
-7.  [Errors and Exceptions](07-errors.html)
+## 학습주제
+|   한국어(Korean)      |    영어(English)            |
+|--------------------------------|-----------------------------------|
+| 1.  [환자 데이터 분석하기](01-numpy.html)                | 1.  [Analyzing Patient Data](01-numpy.html) |
+| 2.  [루프로 동작 반복하기](02-loop.html)                     | 2.  [Repeating Actions with Loops](02-loop.html) |
+| 3.  [리스트에 여러가지 값 저장하기](03-lists.html)         | 3.  [Storing Multiple Values in Lists](03-lists.html) |
+| 4.  [다수 파일에서 나온 데이터 분석하기](04-files.html)  | 4.  [Analyzing Data from Multiple Files](04-files.html) |
+| 5.  [조건 선택하기](05-cond.html)                              | 5.  [Making Choices](05-cond.html) |
+| 6.  [함수 생성하기](06-func.html)                               | 6.  [Creating Functions](06-func.html) |
+| 7.  [오류와 예외](07-errors.html)                               | 7.  [Errors and Exceptions](07-errors.html) |
+| 8.  [방어적 프로그래밍](08-defensive.html)               | 8.  [Defensive Programming](08-defensive.html) |
+| 9.  [디버깅](09-debugging.html)                              | 9.  [Debugging](09-debugging.html) |
+| 10.  [명령-라인 프로그램](10-cmdline.html)               | 10.  [Command-Line Programs](10-cmdline.html) |
+
 
 ## Other Resources
 
-*   [Motivation](motivation.html)
 *   [Reference](reference.html)
 *   [Discussion](discussion.html)
 *   [Instructor's Guide](instructors.html)
